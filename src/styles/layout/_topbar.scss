@@ -276,6 +276,13 @@
             border: 1px solid #ccc;
             font-size: 14px;
         }
+        .custom-search-bar i.pi-search {
+            position: absolute;
+            left: 560px; /* Adjust position inside input */
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6c757d;
+        }
 
         /* Styles for the icons */
         .layout-topbar-menu .p-link {

@@ -224,9 +224,10 @@ const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
 
             <div ref={topbarmenuRef} className={classNames('layout-topbar-menu', { 'layout-topbar-menu-mobile-active': layoutState.profileSidebarVisible })}>
                 <div>
-                    <IconField className="custom-search-bar">
-                        <InputIcon className="pi pi-search" />
-                        <InputText type="text" placeholder="Search" className="custom-search-input" />
+                    <IconField className="relative custom-search-bar">
+                        
+                        <InputText type="text" placeholder="Search" className="custom-search-input pl-10" />
+                        <i className="pi pi-search absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
                     </IconField>
                 </div>
                 <span style={{ marginLeft: '2rem' }}></span>

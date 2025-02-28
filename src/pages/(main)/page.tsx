@@ -8,7 +8,7 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import { LayoutContext } from '../../layout/context/layoutcontext';
 import { ChartData, ChartOptions } from 'chart.js';
 import { useAppContext } from '../../layout/AppWrapper';
-import SupplierDirectory from '../../components/SupplierDirectory';
+// import SupplierDirectory from '../../components/SupplierDirectory';
 
 
 const lineData: ChartData = {
@@ -123,9 +123,6 @@ const Dashboard = () => {
 
     return (
         <div className="grid">
-            <div className="card col-12">
-                <SupplierDirectory />
-            </div>
             <div className="col-12 lg:col-6 xl:col-3">
                 <div className="card mb-0">
                     <div className="flex justify-content-between mb-3">

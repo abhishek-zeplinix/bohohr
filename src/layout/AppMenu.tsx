@@ -58,8 +58,8 @@ const AppMenu = () => {
                     command: handleMenuClick
                 },
                 {
-                    label: 'Guidlines & Glossary',
-                    icon: 'pi pi-sliders-v',
+                    label: 'Employee Management',
+                    icon: 'pi pi-address-book',
                     // check: (user: any) => {
                     //     const checkComm = intersection([...PERMISSION_MENU, ...ROUTE_MENU], get(user, 'permissions', []));
                     //     if (get(user, 'isSuperAdmin') || checkComm.length > 0) {
@@ -69,7 +69,7 @@ const AppMenu = () => {
                     // },
                     items: [
                         {
-                            label: 'FAQs',
+                            label: 'Employee Details',
                             url: '/faq',
                             // check: (user: any) => {
                             //     const checkComm = intersection(ROUTE_MENU, get(user, 'permissions', []));
@@ -81,7 +81,7 @@ const AppMenu = () => {
                             command: handleMenuClick
                         },
                         {
-                            label: 'Supply Glossary',
+                            label: 'Employee Profiles',
                             url: '/supply-glossary',
                             // check: (user: any) => {
                             //     const checkComm = intersection(PERMISSION_MENU, get(user, 'permissions', []));
@@ -95,8 +95,8 @@ const AppMenu = () => {
                     ]
                 },
                 {
-                    label: 'Suppliers',
-                    icon: 'pi pi-truck',
+                    label: 'Leave Management',
+                    icon: 'pi pi-sign-out',
                     check: (user: any) => {
                         const checkComm = intersection([...PERMISSION_MENU, ...ROUTE_MENU], get(user, 'permissions', []));
                         if (get(user, 'isSuperAdmin') || checkComm.length > 0) {
@@ -106,7 +106,7 @@ const AppMenu = () => {
                     },
                     items: [
                         {
-                            label: 'Manage Suppliers',
+                            label: 'Attendance Tracking',
                             url: '/manage-supplier',
                             check: (user: any) => {
                                 const checkComm = intersection(ROUTE_MENU, get(user, 'permissions', []));
@@ -118,7 +118,7 @@ const AppMenu = () => {
                             command: handleMenuClick
                         },
                         {
-                            label: 'Create Supplier',
+                            label: 'Leave Requests',
                             url: '/create-supplier',
                             check: (user: any) => {
                                 const checkComm = intersection(PERMISSION_MENU, get(user, 'permissions', []));
@@ -132,8 +132,8 @@ const AppMenu = () => {
                     ]
                 },
                 {
-                    label: 'Supplier Score',
-                    icon: 'pi pi-wifi',
+                    label: 'Payroll',
+                    icon: 'pi pi-wallet',
                     check: (user: any) => {
                         const checkComm = intersection([...PERMISSION_MENU, ...ROUTE_MENU], get(user, 'permissions', []));
                         if (get(user, 'isSuperAdmin') || checkComm.length > 0) {
@@ -143,7 +143,7 @@ const AppMenu = () => {
                     },
                     items: [
                         {
-                            label: 'Manage Supplier Score',
+                            label: 'Salary calculation',
                             url: '/manage-supplier-score',
                             check: (user: any) => {
                                 const checkComm = intersection(ROUTE_MENU, get(user, 'permissions', []));
@@ -157,7 +157,7 @@ const AppMenu = () => {
                     ]
                 },
                 {
-                    label: 'Rules Manager',
+                    label: 'Role Management',
                     icon: 'pi pi-sitemap',
                     check: (user: any) => {
                         const checkComm = intersection([...PERMISSION_MENU, ...ROUTE_MENU], get(user, 'permissions', []));
@@ -168,7 +168,7 @@ const AppMenu = () => {
                     },
                     items: [
                         {
-                            label: 'Manage Rule',
+                            label: 'Assign roles',
                             url: '/manage-rules',
                             check: (user: any) => {
                                 const checkComm = intersection(ROUTE_MENU, get(user, 'permissions', []));
@@ -179,46 +179,9 @@ const AppMenu = () => {
                             },
                             command: handleMenuClick
                         },
-                        {
-                            label: 'Manage CAPA Rule',
-                            url: '/manage-capa-rules',
-                            check: (user: any) => {
-                                const checkComm = intersection(ROUTE_MENU, get(user, 'permissions', []));
-                                if (get(user, 'isSuperAdmin') || checkComm.length > 0) {
-                                    return true;
-                                }
-                                return false;
-                            },
-                            command: handleMenuClick
-                        }
-                    ]
-                },
-                {
-                    label: 'Users Manager',
-                    icon: 'pi pi-users',
-                    check: (user: any) => {
-                        const checkComm = intersection([...PERMISSION_MENU, ...ROUTE_MENU], get(user, 'permissions', []));
-                        if (get(user, 'isSuperAdmin') || checkComm.length > 0) {
-                            return true;
-                        }
-                        return false;
-                    },
-                    items: [
-                        {
-                            label: 'Manage Users',
-                            url: '/manage-users',
-                            check: (user: any) => {
-                                const checkComm = intersection(ROUTE_MENU, get(user, 'permissions', []));
-                                if (get(user, 'isSuperAdmin') || checkComm.length > 0) {
-                                    return true;
-                                }
-                                return false;
-                            },
-                            command: handleMenuClick
-                        }
                         // {
-                        //     label: 'Create New Rules',
-                        //     url: '/create-new-rules',
+                        //     label: 'Manage CAPA Rule',
+                        //     url: '/manage-capa-rules',
                         //     check: (user: any) => {
                         //         const checkComm = intersection(ROUTE_MENU, get(user, 'permissions', []));
                         //         if (get(user, 'isSuperAdmin') || checkComm.length > 0) {
@@ -231,7 +194,44 @@ const AppMenu = () => {
                     ]
                 },
                 {
-                    label: "Api's Management",
+                    label: 'Task Management',
+                    icon: 'pi pi-list-check',
+                    check: (user: any) => {
+                        const checkComm = intersection([...PERMISSION_MENU, ...ROUTE_MENU], get(user, 'permissions', []));
+                        if (get(user, 'isSuperAdmin') || checkComm.length > 0) {
+                            return true;
+                        }
+                        return false;
+                    },
+                    items: [
+                        {
+                            label: 'Assign employees',
+                            url: '/manage-users',
+                            check: (user: any) => {
+                                const checkComm = intersection(ROUTE_MENU, get(user, 'permissions', []));
+                                if (get(user, 'isSuperAdmin') || checkComm.length > 0) {
+                                    return true;
+                                }
+                                return false;
+                            },
+                            command: handleMenuClick
+                        },
+                        {
+                            label: 'Task tracking',
+                            url: '/create-new-rules',
+                            check: (user: any) => {
+                                const checkComm = intersection(ROUTE_MENU, get(user, 'permissions', []));
+                                if (get(user, 'isSuperAdmin') || checkComm.length > 0) {
+                                    return true;
+                                }
+                                return false;
+                            },
+                            command: handleMenuClick
+                        }
+                    ]
+                },
+                {
+                    label: "Perf. Evaluation",
                     icon: 'pi pi-paperclip',
                     check: (user: any) => {
                         const checkComm = intersection([...PERMISSION_MENU, ...ROUTE_MENU], get(user, 'permissions', []));
@@ -242,7 +242,7 @@ const AppMenu = () => {
                     },
                     items: [
                         {
-                            label: "Manage Api's",
+                            label: "Employee feedback",
                             url: '/manage-api',
                             check: (user: any) => {
                                 const checkComm = intersection(ROUTE_MENU, get(user, 'permissions', []));
@@ -256,8 +256,8 @@ const AppMenu = () => {
                     ]
                 },
                 {
-                    label: 'Request Management',
-                    icon: 'pi pi-bolt',
+                    label: 'Asset Management',
+                    icon: 'pi pi-desktop',
                     // check: (user: any) => {
                     //     const checkComm = intersection([...PERMISSION_MENU, ...ROUTE_MENU], get(user, 'permissions', []));
                     //     if (get(user, 'isSuperAdmin') || checkComm.length > 0) {
@@ -267,7 +267,7 @@ const AppMenu = () => {
                     // },
                     items: [
                         {
-                            label: 'Manage Request',
+                            label: 'Assign Asset ',
                             url: '/manage-requests',
                             // check: (user: any) => {
                             //     const checkComm = intersection(ROUTE_MENU, get(user, 'permissions', []));
@@ -281,8 +281,8 @@ const AppMenu = () => {
                     ]
                 },
                 {
-                    label: 'Supplier Feedback',
-                    icon: 'pi pi-gift',
+                    label: 'Onboarding',
+                    icon: 'pi pi-book',
                     // check: (user: any) => {
                     //     const checkComm = intersection([...PERMISSION_MENU, ...ROUTE_MENU], get(user, 'permissions', []));
                     //     if (get(user, 'isSuperAdmin') || checkComm.length > 0) {
@@ -292,7 +292,7 @@ const AppMenu = () => {
                     // },
                     items: [
                         {
-                            label: 'Manage Feedback',
+                            label: 'Interview scheduling',
                             url: '/manage-feedback',
                             // check: (user: any) => {
                             //     const checkComm = intersection(ROUTE_MENU, get(user, 'permissions', []));
@@ -304,7 +304,7 @@ const AppMenu = () => {
                             command: handleMenuClick
                         },
                         {
-                            label: 'Create new feedback',
+                            label: 'Document verificationfer letter',
                             url: '/add-feedback',
                             // check: (user: any) => {
                             //     const checkComm = intersection(ROUTE_MENU, get(user, 'permissions', []));
@@ -319,7 +319,7 @@ const AppMenu = () => {
                 },
 
                 {
-                    label: 'Control Tower',
+                    label: 'Self-Service Porta',
                     icon: 'pi pi-eject',
                     url: '/control-tower',
                     check: (user: any) => {
@@ -332,8 +332,8 @@ const AppMenu = () => {
                     command: handleMenuClick
                 },
                 {
-                    label: 'My Permissions',
-                    icon: 'pi pi-lock-open',
+                    label: 'Reports & Analytics',
+                    icon: 'pi pi-envelope',
                     url: '/permissions',
                     check: (user: any) => {
                         const checkComm = intersection([...PERMISSION_MENU, ...ROUTE_MENU], get(user, 'permissions', []));
