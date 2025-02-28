@@ -38,7 +38,7 @@ const setAuthData = (token: string, refreshToken: string, userDetails: any) => {
     };
 
     if (domain.indexOf('localhost') == -1) {
-        option.domain = `bohor-hr.${domain}`;
+        option.domain = `boho-hr.${domain}`;
     }
     Cookies.set('authToken', token, option);
     Cookies.set('authRefreshToken', refreshToken, option);
@@ -55,7 +55,7 @@ const setUserDetails = (userDetails: any) => {
     };
 
     if (domain.indexOf('localhost') == -1) {
-        option.domain = `bohor-hr.${domain}`;
+        option.domain = `boho-hr.${domain}`;
     }
     Cookies.set('userDetails', JSON.stringify(userDetails), option);
 };
@@ -83,7 +83,7 @@ const removeAuthData = () => {
     };
 
     if (domain.indexOf('localhost') == -1) {
-        option.domain = `bohor-hr.${domain}`;
+        option.domain = `boho-hr.${domain}`;
     }
     Cookies.remove('authToken', option);
     Cookies.remove('authRefreshToken', option);

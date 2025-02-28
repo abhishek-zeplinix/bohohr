@@ -55,7 +55,7 @@ export const AppWrapper = React.memo(({ children }: any) => {
                 return;
             }
             const returnUrl = `${location.pathname}?${searchParams.toString()}`
-            navigate(`/login?returnUrl=${returnUrl}`);
+            navigate(`/login`);
         }
         else if (authToken && isValid && authRoutes.includes(location.pathname)) {
             const returnUrl = searchParams.get('returnUrl') || '/';
@@ -139,8 +139,8 @@ export const AppWrapper = React.memo(({ children }: any) => {
     const signOut = async () => {
         await removeAuthData();
         setUser(null)
-        const returnUrl = `${location.pathname}?${searchParams.toString()}`
-        navigate(`/login?returnUrl=${returnUrl}`, undefined);
+        // const returnUrl = `${location.pathname}?${searchParams.toString()}`
+        navigate(`/login`, undefined);
     }
 
     const setAlert = (type: string, message: string) => {
