@@ -135,10 +135,10 @@ const Layout = React.memo(({ children }: ChildContainerProps) => {
         'toogle-mobile-active': layoutState.staticMenuMobileActive,
     });
 
-    const iconClass = classNames('pi', {
-        'pi-angle-left': !layoutState.staticMenuDesktopInactive && layoutConfig.menuMode === 'static',
-        'pi-angle-right': layoutState.staticMenuDesktopInactive && layoutConfig.menuMode === 'static',
-    });
+    // const iconClass = classNames('pi', {
+    //     'pi-angle-left': !layoutState.staticMenuDesktopInactive && layoutConfig.menuMode === 'static',
+    //     'pi-angle-right': layoutState.staticMenuDesktopInactive && layoutConfig.menuMode === 'static',
+    // });
 
     if (!user) {
         return (
@@ -154,11 +154,11 @@ const Layout = React.memo(({ children }: ChildContainerProps) => {
         <div className={containerClass}>
             <MyFileUpload />
             <AppTopbar ref={topbarRef} />
-            {!layoutState.isMobile && (
+            {/* {!layoutState.isMobile && (
                 <div className={menuToggleClass} onClick={onMenuToggle}>
                     <i className={iconClass}></i>
                 </div>
-            )}
+            )} */}
             <div ref={sidebarRef} className="layout-sidebar">
                 <AppSidebar />
             </div>

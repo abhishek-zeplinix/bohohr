@@ -73,22 +73,22 @@ const AppMenuitem = (props: AppMenuItemProps) => {
                 <StyleClass nodeRef={btnRef4} selector="@next" enterClassName="hidden" enterActiveClassName="slidedown" leaveToClassName="hidden" leaveActiveClassName="slideup">
                     <div ref={btnRef4} className="p-ripple p-3 pl-1 flex align-items-center justify-content-between text-white cursor-pointer custom-menu-item" onClick={itemClick}>
                         <div>
-                            {item && item.icon != null && <i className={item.icon + ' mr-2 text-lg font-medium'}></i>}
-                            {(layoutState.isMobile || !layoutState.staticMenuDesktopInactive) && <span className="font-medium text-lg">{item?.label}</span>}
+                            {item && item.icon != null && <i className={item.icon + ' mr-2 text-sm font-small font-bold'}></i>}
+                            {(layoutState.isMobile || !layoutState.staticMenuDesktopInactive) && <span className="font-medium text-sm">{item?.label}</span>}
                         </div>
                         {(layoutState.isMobile || !layoutState.staticMenuDesktopInactive) && item && item.items && item?.items?.length > 0 && <i className="pi pi-chevron-down"></i>}
-                        {!layoutState.isMobile && layoutState.staticMenuDesktopInactive && item && item.items && item?.items?.length > 0 && <div className="pi pi-circle-fill" style={{ fontSize: 3 }}></div>}
+                        {!layoutState.isMobile && layoutState.staticMenuDesktopInactive && item && item.items && item?.items?.length > 0 && <div className="pi pi-circle-fill" style={{ fontSize: 2 }}></div>}
                         <Ripple />
                     </div>
                 </StyleClass>
             ) : item?.url ? (
-                <Link to={item?.url} className="p-ripple p-3 pl-1 flex align-items-center justify-content-between text-white cursor-pointer custom-menu-item">
+                <Link to={item?.url} className="p-ripple p-2 pl-1 flex align-items-center justify-content-between text-white cursor-pointer custom-menu-item">
                     <div>
-                        {item && item.icon != null && <i className={item.icon + ' mr-2 text-lg font-medium'}></i>}
-                        {(layoutState.isMobile || !layoutState.staticMenuDesktopInactive) && <span className="font-medium text-lg">{item?.label}</span>}
+                        {item && item.icon != null && <i className={item.icon + ' mr-2 text-sm font-small font-bold'}></i>}
+                        {(layoutState.isMobile || !layoutState.staticMenuDesktopInactive) && <span className="font-medium text-sm font-bold">{item?.label}</span>}
                     </div>
                     {(layoutState.isMobile || !layoutState.staticMenuDesktopInactive) && item && item.items && item?.items?.length > 0 && <i className="pi pi-chevron-down"></i>}
-                    {!layoutState.isMobile && layoutState.staticMenuDesktopInactive && item && item.items && item?.items?.length > 0 && <div className="pi pi-circle-fill" style={{ fontSize: 3 }}></div>}
+                    {!layoutState.isMobile && layoutState.staticMenuDesktopInactive && item && item.items && item?.items?.length > 0 && <div className="pi pi-circle-fill" style={{ fontSize: 2 }}></div>}
                     <Ripple />
                 </Link>
             ) : (

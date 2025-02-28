@@ -2,21 +2,21 @@ import { Route, Routes } from "react-router-dom";
 import LoginPage from "./pages/(full-page)/login/page";
 import ProtectedRoute from "./layout/ProtectedRoute";
 import Dashboard from "./pages/(main)/page";
-import ManageSupplierPage from "./pages/(main)/manage-supplier/page";
-import CreateSupplierPage from "./pages/(main)/create-supplier/page";
-import FaqsPage from "./pages/(main)/faq/page";
-import SupplyGlossaryPage from "./pages/(main)/supply-glossary/page";
-import ManageSupplierScorePage from "./pages/(main)/manage-supplier-score/page";
-import ManageRulesPage from "./pages/(main)/manage-rules/page";
-import ManageCapaRulesPage from "./pages/(main)/manage-capa-rules/page";
+// import ManageSupplierPage from "./pages/(main)/manage-supplier/page";
+// import CreateSupplierPage from "./pages/(main)/create-supplier/page";
+// import FaqsPage from "./pages/(main)/faq/page";
+// import SupplyGlossaryPage from "./pages/(main)/supply-glossary/page";
+// import ManageSupplierScorePage from "./pages/(main)/manage-supplier-score/page";
+// import ManageRulesPage from "./pages/(main)/manage-rules/page";
+// import ManageCapaRulesPage from "./pages/(main)/manage-capa-rules/page";
 import ManageUsersPage from "./pages/(main)/manage-users/page";
-import ManageApiPage from "./pages/(main)/manage-api/page";
+// import ManageApiPage from "./pages/(main)/manage-api/page";
 import UserPage from "./pages/(main)/user/page";
-import ManageRequestsPage from "./pages/(main)/manage-requests/page";
-import ManageFeedbackPage from "./pages/(main)/manage-feedback/page";
-import AddFeedbackPage from "./pages/(main)/add-feedback/page";
+// import ManageRequestsPage from "./pages/(main)/manage-requests/page";
+// import ManageFeedbackPage from "./pages/(main)/manage-feedback/page";
+// import AddFeedbackPage from "./pages/(main)/add-feedback/page";
 import ControlTowerPage from "./pages/(main)/control-tower/page";
-import SupplierScoreboardSummaryPage from "./pages/(main)/supplier-scoreboard-summary/page";
+// import SupplierScoreboardSummaryPage from "./pages/(main)/supplier-scoreboard-summary/page";
 // import ProductsMappingPage from "./pages/(main)/product-mapping/page";
 // import ProductsPage from "./pages/(main)/products/page";
 // import UserProfilePage from "./pages/(main)/profile/page";
@@ -53,21 +53,21 @@ const AppNavigator = () => {
             }
         >
             <Route path="/" element={<Dashboard />} />
-            <Route path="/manage-supplier" element={<ManageSupplierPage />} />
-            <Route path="/create-supplier" element={<CreateSupplierPage />} />
-             <Route path="/faq" element={<FaqsPage />} />
-            <Route path="/supply-glossary" element={<SupplyGlossaryPage />} />
-            <Route path="/manage-supplier-score" element={<ManageSupplierScorePage />} />
-            <Route path="/manage-rules" element={<ManageRulesPage />} />
-            <Route path="/manage-capa-rules" element={<ManageCapaRulesPage />} />
+            {/* <Route path="/manage-supplier" element={<ManageSupplierPage />} /> */}
+            {/* <Route path="/create-supplier" element={<CreateSupplierPage />} /> */}
+             {/* <Route path="/faq" element={<FaqsPage />} /> */}
+            {/* <Route path="/supply-glossary" element={<SupplyGlossaryPage />} /> */}
+            {/* <Route path="/manage-supplier-score" element={<ManageSupplierScorePage />} /> */}
+            {/* <Route path="/manage-rules" element={<ManageRulesPage />} /> */}
+            {/* <Route path="/manage-capa-rules" element={<ManageCapaRulesPage />} /> */}
             <Route path="/manage-users" element={<ManageUsersPage />} />
-            <Route path="/manage-api" element={<ManageApiPage />} />
+            {/* <Route path="/manage-api" element={<ManageApiPage />} /> */}
             <Route path="/user" element={<UserPage />} />
-            <Route path="/manage-requests" element={<ManageRequestsPage />} />
-            <Route path="/manage-feedback" element={<ManageFeedbackPage />} />
-            <Route path="/add-feedback" element={<AddFeedbackPage />} />
+            {/* <Route path="/manage-requests" element={<ManageRequestsPage />} /> */}
+            {/* <Route path="/manage-feedback" element={<ManageFeedbackPage />} /> */}
+            {/* <Route path="/add-feedback" element={<AddFeedbackPage />} /> */}
             <Route path="/control-tower" element={<ControlTowerPage />} />
-            <Route path="/supplier-scoreboard-summary" element={<SupplierScoreboardSummaryPage />} />
+            {/* <Route path="/supplier-scoreboard-summary" element={<SupplierScoreboardSummaryPage />} /> */}
             {/*<Route path="/product-mapping" element={<ProductsMappingPage />} />
             <Route path="/products" element={<ProductsPage />} /> */}
             {/* <Route path="/profile" element={<UserProfilePage />} /> */}

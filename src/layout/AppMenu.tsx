@@ -691,10 +691,10 @@ const AppMenu = () => {
         'toogle-mobile-active': layoutState.staticMenuMobileActive
     });
 
-    const iconClass = classNames('pi', {
-        'pi-angle-left text-lg text-white p-3': !layoutState.staticMenuDesktopInactive && layoutConfig.menuMode === 'static',
-        'pi-angle-right text-lg text-white p-3': layoutState.staticMenuDesktopInactive && layoutConfig.menuMode === 'static'
-    });
+    // const iconClass = classNames('pi', {
+    //     'pi-angle-left text-lg text-white p-3': !layoutState.staticMenuDesktopInactive && layoutConfig.menuMode === 'static',
+    //     'pi-angle-right text-lg text-white p-3': layoutState.staticMenuDesktopInactive && layoutConfig.menuMode === 'static'
+    // });
     return (
         // <MenuProvider>
         //     {layoutState.isMobile && (
@@ -748,13 +748,13 @@ const AppMenu = () => {
             {layoutState.isMobile && (
                 <Link to="/" className="layout-topbar-logo">
                     {/* <img src={getCompanyLogo(user?.company?.logo)} width="100px" height={'35px'} alt="logo" className={layoutState.isMobile ? 'mobile-sidebar-logo-img' : ''} style={{ marginTop: 15 }} /> */}
-                    <img src="/images/reckitt.webp" width="100px" height={'35px'} alt="logo" className={layoutState.isMobile ? 'mobile-sidebar-logo-img' : ''} style={{ marginTop: 15 }} />
+                    <img src="/images/BOHOHR.png" width="100px" height={'35px'} alt="logo" className={layoutState.isMobile ? 'mobile-sidebar-logo-img' : ''} style={{ marginTop: 15 }} />
                 </Link>
             )}
 
-            <div className="min-h-screen flex relative sm:static">
-                <div id="app-sidebar-2" className="h-screen block flex-shrink-0 absolute sm:static left-0 top-0 z-1 select-none" style={{ width: !layoutState.isMobile && layoutState.staticMenuDesktopInactive ? 30 : 265 }}>
-                    <div className="flex flex-column" style={{ height: '92%' }}>
+            <div className="min-h-screen flex relative lg:static">
+                <div id="app-sidebar-2" className="h-screen block flex-shrink-0 absolute sm:static left-0 top-0 z-1 select-none font-bold" style={{ width: !layoutState.isMobile && layoutState.staticMenuDesktopInactive ? 30 : 230 }}>
+                    <div className="flex flex-column">
                         <div
                             className="overflow-y-auto "
                             style={{
@@ -768,7 +768,7 @@ const AppMenu = () => {
                                 })}
                             </ul>
                         </div>
-                        {!layoutState.isMobile && (
+                        {/* {!layoutState.isMobile && (
                             <div className="mt-auto">
                                 <a
                                     v-ripple
@@ -779,7 +779,7 @@ const AppMenu = () => {
                                     <i className={iconClass}></i>
                                 </a>
                             </div>
-                        )}
+                        )} */}
                     </div>
                 </div>
             </div>

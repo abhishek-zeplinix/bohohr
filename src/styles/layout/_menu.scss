@@ -1,11 +1,11 @@
 .layout-sidebar {
     position: fixed;
-    width: 250px;
-    height: calc(100vh - 4rem);
+    width: 220px;
+    height: calc(100vh - 2rem);
     z-index: 999;
     // overflow-y: auto;
     user-select: none;
-    top: 5rem;
+    top: 3.1rem;
     left: 0rem;
     transition: transform $transitionDuration, left $transitionDuration;
     // background-color: #f4f5f7; // var(--surface-overlay);
